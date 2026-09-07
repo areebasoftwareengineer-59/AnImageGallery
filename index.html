@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Image Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>My Image Gallery</h1>
+        <p>Explore Beautiful Moments</p>
+    </header>
+
+    <div class="filters">
+        <button onclick="filterImages('all')">All</button>
+        <button onclick="filterImages('nature')">Nature</button>
+        <button onclick="filterImages('city')">City</button>
+    </div>
+
+    <div class="gallery">
+
+        <div class="image nature">
+            <img src="images/img1.jpg"
+                 alt="Beautiful Nature"
+                 data-caption="Beautiful Nature"
+                 onclick="openLightbox(0)">
+        </div>
+
+        <div class="image city">
+            <img src="images/img2.jpg"
+                 alt="Modern City"
+                 data-caption="Modern City View"
+                 onclick="openLightbox(1)">
+        </div>
+
+        <div class="image nature">
+            <img src="images/img3.jpg"
+                 alt="Mountain Landscape"
+                 data-caption="Peaceful Mountain Landscape"
+                 onclick="openLightbox(2)">
+        </div>
+
+        <div class="image city">
+            <img src="images/img4.jpg"
+                 alt="City Lights"
+                 data-caption="Beautiful City Lights"
+                 onclick="openLightbox(3)">
+        </div>
+
+        <div class="image nature">
+            <img src="images/img5.jpg"
+                 alt="Green Forest"
+                 data-caption="Beautiful Green Forest"
+                 onclick="openLightbox(4)">
+        </div>
+
+        <div class="image city">
+            <img src="images/img6.jpg"
+                 alt="City Building"
+                 data-caption="Modern City Architecture"
+                 onclick="openLightbox(5)">
+        </div>
+
+    </div>
+
+    <div id="lightbox">
+
+        <span class="close" onclick="closeLightbox()">&times;</span>
+
+        <button class="prev" onclick="changeImage(-1)">&#10094;</button>
+
+        <div class="lightbox-content">
+            <img id="lightbox-img" src="" alt="Selected Image">
+            <h2 id="caption"></h2>
+            <button id="favoriteBtn" onclick="toggleFavorite()">♡ Add to Favorites</button>
+        </div>
+
+        <button class="next" onclick="changeImage(1)">&#10095;</button>
+
+    </div>
+
+    <footer>
+        <p>© 2026 My Image Gallery</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
